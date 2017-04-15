@@ -1,0 +1,9 @@
+curl --data '{"band1":"/data/S2A_MSIL1C_20170213T101121_N0204_R022_T33UVP_20170213T101553/red", 
+              "band2":"/data/S2A_MSIL1C_20170213T101121_N0204_R022_T33UVP_20170213T101553/green", 
+			  "output":"/data/user/foo"}' http://localhost:8000/process/addition
+curl --data '{"band1":"/data/S2A_MSIL1C_20170210T100131_N0204_R122_T33UVP_20170210T100132/red", 
+              "band2":"/data/S2A_MSIL1C_20170210T100131_N0204_R122_T33UVP_20170210T100132/green", 
+			  "output":"/data/user/foo2"}' http://localhost:8000/process/addition
+
+curl 'http://localhost:8000/data/user?name=foo&format=GeoTIFF'
+curl 'http://localhost:8000/data/user?name=foo2&format=GeoTIFF'
